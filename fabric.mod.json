@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "knockbackdisplacement",
+  "version": "1.21.11",
+  "name": "Knockback Displacement",
+  "description": "Adjustable angle camera rotation snap and attack displacement mod with YACL config screen",
+  "authors": ["Bonus"],
+  "contact": {},
+  "license": "MIT",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "com.knockbackdisplacement.KnockbackMod"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.15.0",
+    "minecraft": "1.21.x",
+    "java": ">=21",
+    "fabric-api": "*",
+    "yet-another-config-lib": ">=3.0.0"
+  }
+}
