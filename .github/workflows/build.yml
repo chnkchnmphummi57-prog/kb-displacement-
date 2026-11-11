@@ -15,5 +15,14 @@ jobs:
           java-version: '21'
           distribution: 'temurin'
 
-      - name: Grant execute permission for gradlew
-        uses: sigstore/cosign-installer@v3.8.0 # (or just use standard chmod)
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v3
+
+      - name: Build with Gradle
+        run: gradle build
+
+      - name: Upload Jar Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: knockbackdisplacement-1.21.11
+          path: build/libs/knockbackdisplacement-1.21.11.jar
